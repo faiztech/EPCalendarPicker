@@ -242,7 +242,74 @@ open class EPCalendarPicker: UICollectionViewController {
                 cell.lblDay.textColor = self.dayDisabledTintColor
             }
         }
-        
+      
+      
+      
+      
+      
+      let currentDateTest = Date()
+      
+      switch currentDateTest.getWeekday() {
+      case 1:
+      
+         if(cell.currentDate > currentDateTest.dateByAddingDays(6))
+         {
+            cell.isCellSelectable = false
+            cell.lblDay.textColor = self.dayDisabledTintColor
+         }
+      case 2:
+         
+         if(cell.currentDate > currentDateTest.dateByAddingDays(5))
+         {
+            cell.isCellSelectable = false
+            cell.lblDay.textColor = self.dayDisabledTintColor
+         }
+      case 3:
+         
+         if(cell.currentDate > currentDateTest.dateByAddingDays(4))
+         {
+            cell.isCellSelectable = false
+            cell.lblDay.textColor = self.dayDisabledTintColor
+         }
+      case 4:
+         
+         if(cell.currentDate > currentDateTest.dateByAddingDays(3))
+         {
+            cell.isCellSelectable = false
+            cell.lblDay.textColor = self.dayDisabledTintColor
+         }
+      case 5:
+         
+         if(cell.currentDate > currentDateTest.dateByAddingDays(2))
+         {
+            cell.isCellSelectable = false
+            cell.lblDay.textColor = self.dayDisabledTintColor
+         }
+      case 6:
+         
+         if(cell.currentDate > currentDateTest.dateByAddingDays(1))
+         {
+            cell.isCellSelectable = false
+            cell.lblDay.textColor = self.dayDisabledTintColor
+         }
+      case 7:
+         
+         if(cell.currentDate > currentDateTest.dateByAddingDays(0))
+         {
+            cell.isCellSelectable = false
+            cell.lblDay.textColor = self.dayDisabledTintColor
+         }
+         
+      default: break
+         
+      }
+      
+      
+      
+      
+      
+      
+      
         cell.backgroundColor = UIColor.clear
         return cell
     }
